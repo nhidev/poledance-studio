@@ -1,9 +1,8 @@
 import React, { useEffect, useRef } from "react";
-
 import styles from "./Header.module.scss";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
-import { openMenu } from "../../utils/app";
+import SwiperSlider from "./SwiperSlider";
 
 const Header = () => {
   const { t } = useTranslation("footer");
@@ -100,40 +99,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
-      <header className={styles["header"]}>
-        <div className={styles["main-heading"]}>
-          <article>
-            <h1 className={styles["site-title"]}>Dan Studio</h1>
-          </article>
-
-          <div className={styles["slide-container"]}>
-            {/* <div className={styles["slide-wrapper"]}>
-              <div className={styles["slide"] + " " + styles["active"]}>
-                <img src="https://vibez.qodeinteractive.com/wp-content/uploads/2017/03/h5-slider1-backgroound-img.jpg" alt="" data-id="" />
-              </div>
-              <div className={styles["slide"] + " " + styles["next"]}>
-                <img src="https://vibez.qodeinteractive.com/wp-content/uploads/2017/03/h5-slider2-backgroound-img.jpg" alt="" data-id="" />
-              </div>
-            </div>
-
-            <div className={styles["slide-arrows"]}>
-              <div className={styles['button-next']} onClick={prevPhoto()}></div>
-              <div className={styles["button-prev"]} ></div>
-
-              <div className={styles['button-next']} onClick={nextPhoto()}></div>
-            </div>
-            <div className={styles['slide-bullets']}>
-              <span
-                className={styles["bullet"] + " " + styles["selected"]}
-                data-id="0"
-              ></span>
-              <span className={styles["bullet"]} data-id="1"></span>
-              <span className={styles["bullet"]} data-id="2"></span>
-              <span className={styles["bullet"]} data-id="3"></span>
-            </div> */}
-          </div>
-        </div>
-      </header>
+      <SwiperSlider />
     </>
   );
 };
