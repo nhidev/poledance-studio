@@ -1,0 +1,102 @@
+@import "../../styles/settings/__settings";
+
+.footer {
+  padding-top: 200px;
+
+  @include sm {
+    padding-top: 30px;
+  }
+
+  .content {
+    background-color: $neu-07;
+    width: 100%;
+    height: 290px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    @include sm {
+      grid-template-columns: 10px repeat(12, 1fr) 10px;
+      grid-column-gap: 10px;
+      height: 180px;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: solid 1px $m-01;
+      grid-column: 2 / 14;
+      transform: translateY(-50px);
+
+      @include sm {
+        transform: translateY(-20px);
+      }
+    }
+
+    article {
+      grid-column: 3/13;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      z-index: 3;
+
+      .text {
+        color: $m-01;
+        text-align: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      .credits {
+        display: block;
+        color: $neu-05;
+        text-align: center;
+        margin-top: 20px;
+
+        font-size: 12px;
+
+        a {
+          color: white;
+          text-decoration: none;
+          cursor: pointer;
+          position: relative;
+          transition: all 0.4s ease;
+          padding: 0 2px;
+
+          &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 0%;
+            background: $g-01;
+            grid-column: 2 / 14;
+            transform: translateY(5px);
+            left: 0;
+            bottom: 0;
+            transition: all 0.4s ease;
+            z-index: -1;
+          }
+
+          span {
+            display: inline-block;
+          }
+
+          &:hover {
+            color: $neu-06;
+
+            &:before {
+              height: 100%;
+              transform: translateY(0px);
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
