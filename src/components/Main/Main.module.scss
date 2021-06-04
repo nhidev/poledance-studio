@@ -1,138 +1,6 @@
 @import "../../styles/settings/__settings";
 
-.btn {
-  min-width: 160px;
-  padding: 16px 30px;
-  box-shadow: inset 0px 0px 0px 1px $m-01;
-  border: 0;
-  background-color: white;
-  color: $m-01;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 14px;
-  position: relative;
-  letter-spacing: 0.05em;
-  cursor: pointer;
-  margin: auto;
-  display: block;
 
-  &:focus {
-    outline: 0;
-  }
-
-  &:before {
-    width: 100%;
-    height: 100%;
-    background-color: $m-01;
-    position: absolute;
-    content: "";
-    z-index: -1;
-    left: 0;
-    top: 0;
-    transition: all 0.3s ease;
-    transform: translate(6px, 6px);
-  }
-
-  &:hover {
-    &:before {
-      transform: translate(0px, 0px);
-    }
-  }
-}
-// Content
-
-.section-title {
-  color: $m-01;
-  text-transform: uppercase;
-  text-align: center;
-  position: relative;
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  font-weight: 900;
-  font-size: 50px;
-  line-height: normal;
-  letter-spacing: 0.04em;
-  height: 120px;
-  grid-column: 1 / 15;
-  margin-bottom: 40px;
-
-  @include sm {
-    font-size: 32px;
-    height: 76px;
-    margin-bottom: 30px;
-  }
-
-  b {
-    font-weight: 900;
-    margin: 0 10px;
-
-    @include sm {
-      margin: 0 5px;
-    }
-  }
-
-  span {
-    color: transparent;
-    -webkit-text-stroke: 1px $m-01;
-    margin: 0 10px;
-
-    @include sm {
-      margin: 0 5px;
-    }
-  }
-
-  &:before {
-    content: "";
-    width: 10px;
-    height: 40px;
-    background-color: $neu-02;
-    position: absolute;
-    transform: rotate(20deg);
-    bottom: 0;
-
-    @include sm {
-      width: 7px;
-      height: 26px;
-    }
-  }
-}
-
-.module {
-  display: grid;
-  grid-template-columns: repeat(14, 1fr);
-  grid-column-gap: 20px;
-  width: 100%;
-  max-width: 1920px;
-  margin: auto;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  @include sm {
-    grid-column-gap: 10px;
-    grid-template-columns: 10px repeat(12, 1fr) 10px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-
-  .content {
-    grid-column: 3 / 13;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-column-gap: 20px;
-
-    @include md {
-      grid-column: 2 / 14;
-    }
-
-    @include sm {
-      grid-template-columns: repeat(1, 1fr);
-      grid-column: 2 / 14;
-    }
-  }
-}
-
-// modules
 
 .tour-list {
   padding-top: 150px !important;
@@ -411,7 +279,7 @@
         width: 32px;
         height: 32px;
         display: block;
-        background-image: url(https://rafaelavlucas.github.io/assets/icons/white/icon-179.svg);
+        background-image: url("/assets/icon-video-play.svg");
 
         @include sm {
           transform: translateY(80px);
@@ -1209,7 +1077,7 @@
           right: 10%;
           top: 0;
           transition: all 0.4s ease;
-          background-image: url(https://rafaelavlucas.github.io/assets/icons/white/icon-12.svg);
+          background-image: url("/assets/icon-send.svg");
           transform: translate(-10px, 5px);
           cursor: pointer;
 
