@@ -33,10 +33,9 @@ const DanceOptionsStyled = styled.section`
   }
 
   .content {
-    @include sm {
-      grid-template-columns: repeat(1, 1fr);
+    ${respondTo.sm`
       grid-row-gap: 10px;
-    }
+    `}
 
     .col {
       overflow: hidden;
@@ -214,13 +213,13 @@ const DanceOptions = () => {
           <p className="title mid-title">EXOTIC POLE</p>
           <img src="/assets/pole-dancing.jpg" alt="" />
           <div>
-          Exotic pole dancing always causes conflicting feelings in some people. We are used to it, but how can we start to explain dancing a sensual dance to someone who is surrounded by the opinion that only a fallen women can wear these terrible shoes, not to mention men.
+          Exotic Pole shows the most sensual and tempting side of pole dancing. This is a choreography class in high heels (heels are optional), you will learn to feel your body and movement , awaken your natural sensuality and musicality, how to express yourself with the dance.
           </div>
         </div>
         <div className="col last">
           <p className="title last-title">AERIAL YOGA</p>
           <div>
-          Aerial Yoga takes many of the traditional yoga poses and incorporates them using swings that hang from the ceiling. It also uses aspects of pilates, dance, and gymnastics. 
+          Aerial Yoga takes many of the traditional yoga poses and incorporates them using swings that hang from the ceiling. 
           </div>
           <img src="/assets/aerial-dancing.jpg" alt="" />
         </div>

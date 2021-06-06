@@ -38,6 +38,7 @@ const LatestVideosStyled = styled.section`
 
     ${respondTo.sm`
       grid-template-columns: 1fr;
+      grid-row-gap: 10px;
     `}
 
     .video-item {

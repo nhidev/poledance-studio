@@ -82,11 +82,11 @@ const ContactStyled = styled.section`
           color: #000;
           text-align: left;
           transition: all 0.2s ease;
-          padding: 0 12px 0 50px;
+          padding: 10px 12px 0 50px;
           background-position: 0 0;
           background-size: contain;
           height: 40px;
-          line-height: 40px;
+          line-height: 1.6;
           margin-bottom: 10px;;
           background-repeat: no-repeat;
           background-position: center left;
@@ -105,9 +105,7 @@ const ContactStyled = styled.section`
 
           ${respondTo.sm`
             height: 32px;
-            line-height: 32px;
             background-size: 32px;
-            margin-bottom: 5px;
           `}
         }
         .button-container {
