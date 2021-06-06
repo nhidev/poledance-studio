@@ -47,12 +47,8 @@ const DanceOptionsStyled = styled.section`
       align-items: center;
       background-color: ${colors.m01};
 
-      ${respondTo.md`
-        height: 280px;
-      `}
-
-      ${respondTo.md`
-        height: 200px;
+      ${respondTo.sm`
+        height: 320px;
       `}
       > div {
         color: #fff;
