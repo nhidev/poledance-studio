@@ -387,6 +387,7 @@ const Header = () => {
       setTimeout(function () {
         menuOverlay.classList.remove("menu-open");
       }, 800);
+
       setTimeout(function () {
         menuOverlay.classList.remove("menu-close");
       }, 900);
@@ -415,10 +416,9 @@ const Header = () => {
     <>
       <HeaderStyled>
         <i className="icon-menu" ref={iconMenuRef} onClick={openMenu}>
-          {" "}
           <span></span>
         </i>
-        <div className="main-nav" ref={mainNavRef}>
+        <div className="main-nav" ref={mainNavRef}  onClick={openMenu}>
           <div className="menu">
             <div className="menu-items">
             {buttons.map((button) => (
