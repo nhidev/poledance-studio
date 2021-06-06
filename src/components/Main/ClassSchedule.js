@@ -58,6 +58,10 @@ const ClassScheduleStyled = styled.section`
         margin-bottom: 20px;
         text-transform: uppercase;
         min-width: 130px;
+        ${respondTo.sm`
+          font-size: 18px;
+          width: fit-content;
+        `}
       }
       .arrow-down {
         width: 32px;
@@ -125,6 +129,9 @@ const ClassScheduleStyled = styled.section`
         &:hover {
           background-color: rgb(231 239 245 / 50%);
         }
+        ${respondTo.sm`
+          font-size: 12px;
+        `}
       }
      
     }
@@ -138,7 +145,7 @@ const ClassScheduleStyled = styled.section`
       `}
       li {
         display: grid;
-        grid-template-columns: auto 3fr 2fr auto;
+        grid-template-columns: auto auto auto;
         grid-column-gap: 4%;
         text-transform: uppercase;
         // font-family: $font-01;
@@ -148,34 +155,17 @@ const ClassScheduleStyled = styled.section`
         align-items: center;
         padding: 20px 10px;
         border-bottom: 1px solid ${colors.m02};
-        grid-template-areas: "date place country buttons";
+        grid-template-areas: "date place country";
         transition: all 0.6s ease;
         cursor: default;
 
-        ${respondTo.lg`
-          grid-template-columns: 2fr 1fr;
-          grid-template-areas:
-            "date date date"
-            "place country buttons";
-          grid-row-gap: 20px;
-        `}
-
         ${respondTo.md`
-          grid-template-columns: auto 1fr auto;
-          grid-template-areas:
-            "date place place"
-            ". country buttons";
           grid-row-gap: 20px;
         `}
 
         ${respondTo.sm`
+          font-size: 12px;
           padding: 20px 0 20px 0;
-          grid-template-columns: 1fr 1fr;
-          grid-template-areas:
-            "date ."
-            "place country"
-            "buttons buttons";
-
           &:first-child {
             padding: 0px 0 20px 0;
           }
@@ -215,10 +205,16 @@ const ClassScheduleStyled = styled.section`
         color: ${colors.m01};
         margin-bottom: 20px;
         text-transform: uppercase;
+        ${respondTo.sm`
+          font-size: 18px;
+        `}
       }
       p {
         color: ${colors.neu06};
-        /* text-transform: uppercase; */
+        text-transform: uppercase;
+        ${respondTo.sm`
+          font-size: 12px;
+        `}
       }
       a .btn {
       margin: 20px 0;

@@ -48,7 +48,7 @@ const DanceOptionsStyled = styled.section`
       background-color: ${colors.m01};
 
       ${respondTo.sm`
-        height: 320px;
+        height: 240px;
       `}
       > div {
         color: #fff;
@@ -63,6 +63,9 @@ const DanceOptionsStyled = styled.section`
         top: 0;
         bottom: 0;
         margin: auto;
+        ${respondTo.sm`
+          font-size: 12px;
+        `}
       }
 
       img {
