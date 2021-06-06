@@ -251,8 +251,8 @@ const Intro = () => {
         </div>
 
         <div className="button-container">
-          <a href="#" target="_blank">
-            <button className="btn">Claim your space</button>
+          <a href="/classes">
+            <button className="btn">Find our more</button>
           </a>
         </div>
       </div>

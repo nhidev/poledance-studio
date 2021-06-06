@@ -6,7 +6,6 @@ import { respondTo } from "../../styles/mixins";
 // import styles from "./Main.module.scss";
 
 const ClassScheduleStyled = styled.section`
-  padding-top: 150px !important;
 
   ${respondTo.sm`
     padding-top: 60px !important;
@@ -452,7 +451,7 @@ const ClassSchedule = () => {
         <div className="fee">
           <h4>Class prices</h4>
           <p>Drop in 220k</p>
-          <p>8 classes 1.200.000</p>
+          <p>8 Classes 1.200.000</p>
           <p>Combo 28 classes 3.500.000 / 4 months </p>
           <p>Combo 60 classes 7.000.000 / 8 months </p>
           <a href="/schedule">

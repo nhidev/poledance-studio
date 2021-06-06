@@ -3,7 +3,6 @@ import { colors } from "../../styles/theme";
 import { respondTo } from "../../styles/mixins";
 
 const ClasssTableStyled = styled.section`
-  padding-top: 200px;
   &:before {
     content: "";
     position: absolute;

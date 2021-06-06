@@ -8,7 +8,6 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Map from "../components/Map";
 
 const ContactStyled = styled.section`
-  padding-top: 200px;
   &:before {
     content: "";
     position: absolute;
@@ -58,7 +57,6 @@ const ContactStyled = styled.section`
         cursor: default;
        
         ${respondTo.lg`
-          grid-row-gap: 20px;
           margin: 0 6%;
         `}
 
@@ -77,30 +75,38 @@ const ContactStyled = styled.section`
           font-size: 12px;
         `}
         h4 {
-          margin: 10px 0;
+          margin: 20px 0;
         }
 
         p {
           color: #000;
-          transition: all 0.2s ease;
-          padding: 15px 60px;
-          background-position: 0 0;
           text-align: left;
+          transition: all 0.2s ease;
+          padding: 0 12px 0 50px;
+          background-position: 0 0;
           background-size: contain;
+          height: 40px;
+          line-height: 40px;
+          margin-bottom: 10px;;
+          background-repeat: no-repeat;
+          background-position: center left;
           &.tel {
-            background: url('/assets/icon-phone.jpg') no-repeat center left;
+            background-image: url('/assets/icon-phone.jpg');
           }
           &.email {
-            background: url('/assets/icon-email.jpg') no-repeat center left;      
+            background-image: url('/assets/icon-email.jpg');      
           }
           &.address {
-            background: url('/assets/icon-address.jpg') no-repeat center left;   
+            background-image: url('/assets/icon-address.jpg');   
           }
           &.time {
-            background: url('/assets/icon-hours.jpg') no-repeat top left;
+            background-image: url('/assets/icon-hours.jpg');
           }
 
           ${respondTo.sm`
+            height: 32px;
+            line-height: 32px;
+            background-size: 32px;
             margin-bottom: 5px;
           `}
         }
@@ -130,7 +136,7 @@ const Contact = () => {
             <h4>Get in Touch</h4>
             <p className="tel">0973825156</p>
             <p className="email">untilyou0612@gmail.com</p>
-            <p className="address">179B Nguyen Huu Canh Street, Ward 22</p>
+            <p className="address">Floor 2, 179B Nguyen Huu Canh Street, Ward 22</p>
             <p className="time">Open during class times.</p>
             
             <div className="button-container">

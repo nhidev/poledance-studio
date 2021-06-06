@@ -72,23 +72,23 @@ class Map extends PureComponent {
     super(props);
     this.state = {
       viewport: {
-        latitude: 10.806140602634395,
-        longitude: 106.71799112664314,
+        longitude: 106.71806,
+        latitude: 10.79361,
         zoom: 15,
       },
       selectedIndex: null,
       tempMarker: {
         name: "Dan Poledance Studio",
-        address: "1-14 Ngo Tat To Gia Tri Street, Ward 19",
-        longitude: 106.71799112664314,
-        latitude: 10.806140602634395,
+        address: "Floor 2, 179B Nguyen Huu Canh Street, Ward 22",
+        longitude: 106.71806,
+        latitude: 10.79361,
       },
       markers: [
         {
           name: "Dan Poledance Studio",
-          address: "1-14 Ngo Tat To Gia Tri Street, Ward 19",
-          longitude: 106.71799112664314,
-          latitude: 10.806140602634395,
+          address: "Floor 2, 179B Nguyen Huu Canh Street, Ward 22",
+          longitude: 106.71806,
+          latitude: 10.79361,
         },
       ],
     };

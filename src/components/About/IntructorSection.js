@@ -3,7 +3,6 @@ import { colors } from "../../styles/theme";
 import { respondTo } from "../../styles/mixins";
 
 const IntructorSectionStyled = styled.section`
-  padding-top: 200px;
   &:before {
     content: "";
     position: absolute;
@@ -34,19 +33,6 @@ const IntructorSectionStyled = styled.section`
       grid-column: 1 / 11;
       h1 {
         margin-bottom: 20px;
-      }
-      .full-box {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-column-gap: 4%;
-
-        ${respondTo.lg`
-          grid-row-gap: 20px;
-        `}
-
-        ${respondTo.sm`
-          padding: 20px 0 20px 0;
-        `}
       }
     }
     article {
@@ -222,7 +208,7 @@ const IntructorSection = () => {
       <div className="content full-content">
         <div className="block">
           <article className="full-box">
-            <h1>DAN POLEDANCE STUDIO</h1>
+            <h1 className="section-title">DAN POLEDANCE STUDIO</h1>
             <p>
               We strive to help find <b>YOUR INNER FIRE</b>
             </p>
@@ -256,7 +242,7 @@ const IntructorSection = () => {
         </div>
       </div>
       <h3 className="section-title">
-        <b>Meet the</b>
+        <b>Meet</b>
         <span>Intructors</span>
       </h3>
       <div className="content">
@@ -270,12 +256,14 @@ const IntructorSection = () => {
             <article>
               <h3>Trương Hoài Đan</h3>
               <p>
-                Đan is the very proud owner of Dan Poledance Studi and has been turning himself upside down
-                and spinning round a pole since 2015.
+                Đan is the very proud owner of Dan Poledance Studi and has been
+                turning himself upside down and spinning round a pole since
+                2015.
               </p>
-              <p>Dan is a veritable fountain of pole-related
-                knowledge. There’s nothing he doesn’t know about spins, tricks
-                and getting flexible.
+              <p>
+                Dan is a veritable fountain of pole-related knowledge. There’s
+                nothing he doesn’t know about spins, tricks and getting
+                flexible.
               </p>
               <p>
                 Check him out on Instagram @dantruong , watch his endless
@@ -297,7 +285,9 @@ const IntructorSection = () => {
             <article>
               <h3>Nanami Kuwahara</h3>
               <p>
-                Nanami Kuwahara – has been teaching pole and competing professionally since 2018. Renowned worldwide for her unique style of movement, her powerhouse strength and fearlessness.
+                Nanami Kuwahara – has been teaching pole and competing
+                professionally since 2018. Renowned worldwide for her unique
+                style of movement, her powerhouse strength and fearlessness.
               </p>
               <p>
                 Check her out on Instagram @nanami_rosie , watch her endless

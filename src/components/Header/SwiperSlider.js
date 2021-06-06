@@ -6,6 +6,7 @@ import { respondTo } from "../../styles/mixins";
 const SwiperSliderStyled = styled.header`
   width: 100%;
   background-image: ${colors.g02};
+  margin-bottom: 100px;
 
   .main-heading {
     width: 100%;

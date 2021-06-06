@@ -125,13 +125,13 @@ export default css`
     font-size: 50px;
     line-height: normal;
     letter-spacing: 0.04em;
-    height: 120px;
+    min-height: 120px;
     grid-column: 1 / 15;
     margin-bottom: 40px;
 
     ${respondTo.sm`
       font-size: 32px;
-      height: 76px;
+      min-height: 76px;
       margin-bottom: 30px;
     `}
 
@@ -182,8 +182,8 @@ export default css`
     ${respondTo.sm`
       grid-column-gap: 10px;
       grid-template-columns: 10px repeat(12, 1fr) 10px;
-      padding-top: 40px;
-      padding-bottom: 40px;
+      padding-top: 60px;
+      padding-bottom: 60px;
     `}
 
     .content {

@@ -186,7 +186,9 @@ const FollowUsStyled = styled.section`
           &.time {
             background-image: url('/assets/icon-hours.svg');
           }
-          
+          ${respondTo.sm`
+           font-size: 12px;
+          `}
         }
         
         ${respondTo.sm`
@@ -307,7 +309,7 @@ const FollowUs = () => {
           <div className="info">
           <p className="tel">0973825156</p>
             <p className="email">untilyou0612@gmail.com</p>
-            <p className="address">179B Nguyen Huu Canh Street, Ward 22</p>
+            <p className="address">Floor 2, 179B Nguyen Huu Canh Street, Ward 22</p>
             <p className="time">Open during class times.</p>
          
           </div>

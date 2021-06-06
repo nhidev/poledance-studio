@@ -3,7 +3,6 @@ import { colors } from "../../styles/theme";
 import { respondTo } from "../../styles/mixins";
 
 const ClassesSectionStyled = styled.section`
-  padding-top: 200px;
   &:before {
     content: "";
     position: absolute;
@@ -37,7 +36,7 @@ const ClassesSectionStyled = styled.section`
         margin-bottom: 20px;
       }
       .full-box {
-        display: grid;
+        /* display: grid;
         grid-template-columns: 1fr;
         grid-column-gap: 4%;
 
@@ -47,7 +46,7 @@ const ClassesSectionStyled = styled.section`
 
         ${respondTo.sm`
           padding: 20px 0 20px 0;
-        `}
+        `} */
         p {
           color: #000;
         }
@@ -58,6 +57,7 @@ const ClassesSectionStyled = styled.section`
   .content {
     grid-template-rows: auto auto auto;
     margin-bottom: 100px;
+    
     ${respondTo.sm`
       justify-items: center;
       grid-template-columns: 1fr;
@@ -216,7 +216,7 @@ const ClassesSection = () => {
       <div className="content full-content">
         <div className="block">
           <article className="full-box">
-            <h1>CLASS DESCRIPTIONS</h1>
+            <h1 className="section-title">CLASS DESCRIPTIONS</h1>
             <p>
               Dan Studio offers a variety of classes to best fit your pole style{" "}
               {"<3"}
