@@ -159,9 +159,10 @@ const DanceOptionsStyled = styled.section`
         text-align: center;
         top: 20px;
         cursor: default;
-
+        width: 100%;
         ${respondTo.sm`
-          right: 20px;
+          left: 20px;
+          text-align: left;
         `}
       }
     }
@@ -183,7 +184,8 @@ const DanceOptionsStyled = styled.section`
         text-align: right;
 
         ${respondTo.sm`
-          right: 20px;
+          left: 20px;
+          text-align: left;
         `}
       }
     }
