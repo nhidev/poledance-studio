@@ -61,6 +61,7 @@ const DanceOptionsStyled = styled.section`
         width: 100%;
         padding: 0 10%;
         box-sizing: border-box;
+        bottom: 25%;
       }
 
       img {
@@ -150,6 +151,7 @@ const DanceOptionsStyled = styled.section`
 
     .mid {
       grid-column: 4 / 8;
+      position: relative;
       ${respondTo.sm`
         grid-column: 1;
       `}
