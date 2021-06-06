@@ -72,7 +72,7 @@ const FollowUsStyled = styled.section`
       `}
 
       ${respondTo.sm`
-        height: 200px;
+        height: 300px;
       `}
 
       img {
@@ -157,73 +157,41 @@ const FollowUsStyled = styled.section`
         `}
       }
 
-      .form {
-        z-index: 3;
+      .info {
+        color: white;
         position: absolute;
         width: 100%;
         padding: 0 10%;
         box-sizing: border-box;
-
+        z-index: 3;
+        p {
+          position: relative;
+          color: #000;
+          transition: all 0.2s ease;
+          padding: 10px 0 10px 40px;
+          background-position: center left;
+          text-align: left;
+          background-size: 28px;
+          background-repeat: no-repeat;
+          filter: invert(1);
+          &.tel {
+            background-image: url('/assets/icon-phone.svg');
+          }
+          &.email {
+            background-image: url('/assets/icon-email.svg');      
+          }
+          &.address {
+            background-image: url('/assets/icon-address.svg');   
+          }
+          &.time {
+            background-image: url('/assets/icon-hours.svg');
+          }
+          
+        }
+        
         ${respondTo.sm`
-          padding: 0 20px;
+          padding: 20px 20px 0;
         `}
-
-        input {
-          width: 100%;
-          background-color: transparent;
-          color: white;
-          border: 0;
-          box-shadow: inset 0px -2px 0px white;
-          padding: 10px 40px 10px 10px;
-          text-transform: uppercase;
-          font-weight: 900;
-          font-size: 18px;
-          letter-spacing: 0.05em;
-          box-sizing: border-box;
-
-          &:focus {
-            outline: 0;
-          }
-
-          &::placeholder {
-            color: white;
-            text-transform: uppercase;
-            font-weight: 900;
-            font-size: 18px;
-            opacity: 0.5;
-            letter-spacing: 0.05em;
-
-            ${respondTo.sm`
-              font-size: 14px;
-            `}
-          }
-
-          ${respondTo.sm`
-            font-size: 14px;
-          `}
-        }
-
-        .send {
-          width: 24px;
-          height: 24px;
-          position: absolute;
-          z-index: 3;
-          right: 10%;
-          top: 0;
-          transition: all 0.4s ease;
-          background-image: url("/assets/icon-send.svg");
-          transform: translate(-10px, 5px);
-          cursor: pointer;
-
-          ${respondTo.sm`
-            right: 20px;
-            transform: translate(-10px, 5px);
-          `}
-
-          &:hover {
-            transform: translate(0px, 5px);
-          }
-        }
       }
     }
 
@@ -332,21 +300,25 @@ const FollowUs = () => {
       </h3>
       <div className="content">
         <div className="newsletter">
-          <p className="social-title">Newsletter</p>
+          <p className="social-title">Dance with us</p>
 
           <img src="/assets/new-letter-box-bg.jpg" alt="" />
 
-          <div className="form">
-            <input type="text" placeholder="email" />
-            <i className="send"></i>
+          <div className="info">
+          <p className="tel">0973825156</p>
+            <p className="email">untilyou0612@gmail.com</p>
+            <p className="address">179B Nguyen Huu Canh Street, Ward 22</p>
+            <p className="time">Open during class times.</p>
+         
           </div>
         </div>
+
         <div className="social">
           <p className="social-title">Social</p>
           <div className="social-icons">
             <a
               className="network"
-              href="#"
+              href="https://www.facebook.com/Dan-Poledance-Studio-2215009938546431"
               target="_blank"
             >
               <img src="/assets/facebook.svg" alt="" />

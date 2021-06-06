@@ -2,7 +2,6 @@ import styled from "styled-components";
 import React, { useEffect, useRef } from "react";
 import { colors } from "../../styles/theme";
 import { respondTo } from "../../styles/mixins";
-import { useRouter } from "next/router";
 
 const SwiperSliderStyled = styled.header`
   width: 100%;
@@ -59,7 +58,7 @@ const SwiperSliderStyled = styled.header`
         margin-top: 40px;
       `}
 
-        .site-title {
+        .site-title a {
         font-size: 144px;
         font-weight: 800;
         text-transform: uppercase;
@@ -397,19 +396,19 @@ const SwiperSliderStyled = styled.header`
 export const images = [
   {
     id: 0,
-    image: "/assets/slider1.jpg",
-  },
-  {
-    id: 1,
     image: "/assets/slider2.jpg",
   },
   {
+    id: 1,
+    image: "/assets/slider4.jpg",
+  },
+  {
     id: 2,
-    image: "/assets/slider3.jpg",
+    image: "/assets/slider1.jpg",
   },
   {
     id: 3,
-    image: "/assets/slider4.jpg",
+    image: "/assets/slider3.jpg",
   },
 ];
 
@@ -516,7 +515,7 @@ const SwiperSlider = () => {
     <SwiperSliderStyled>
       <div className="main-heading">
         <article>
-          <h1 className="site-title">Dan Studio</h1>
+          <h1 className="site-title"><a href="/">Dan Studio</a></h1>
         </article>
 
         <div className="slide-container">

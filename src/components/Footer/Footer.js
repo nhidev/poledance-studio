@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { useTranslation } from "next-i18next";
-import { useRouter } from "next/router";
 import { colors } from '../../styles/theme';
 import { respondTo } from '../../styles/mixins';
 
@@ -55,7 +53,7 @@ const FooterStyled = styled.footer`
 
       .credits {
         display: block;
-        color: $neu-05;
+        color: ${colors.neu05};
         text-align: center;
         margin-top: 20px;
 
@@ -103,21 +101,12 @@ const FooterStyled = styled.footer`
 `;
 
 const Footer = () => {
-  const { t } = useTranslation("footer");
-  const router = useRouter();
-  const { locale } = router;
-
-  const changeLanguage = (e) => {
-    const locale = e.target.value;
-    router.push(router.pathname, router.asPath, { locale });
-  };
-
   return (
     <FooterStyled>
       <div className="content">
         <article>
           <p className="text">
-            Dan Poledance Studio @ 2021 — all rights reserved
+            <a href="/">Dan Poledance Studio</a> @ 2021 — all rights reserved
           </p>
           <p className="credits">
             design by{" "}
@@ -125,10 +114,6 @@ const Footer = () => {
               <span>3m4</span>
             </a>
           </p>
-          <select onChange={changeLanguage} defaultValue={locale}>
-            <option value="en">EN</option>
-            <option value="vn">VN</option>
-          </select>
         </article>
       </div>
     </FooterStyled>

@@ -2,10 +2,11 @@ import styled from "styled-components";
 import React, { useEffect, useRef } from "react";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
+import Link from "next/link";
 import { colors } from "../../styles/theme";
 import { respondTo } from "../../styles/mixins";
-
 import SwiperSlider from "./SwiperSlider";
+// import LanguageSwitcher from "./LanguageSwitcher";
 
 const HeaderStyled = styled.nav`
   .icon-menu {
@@ -144,7 +145,7 @@ const HeaderStyled = styled.nav`
         z-index: 5;
 
         .item {
-          color: $m-01;
+          color: ${colors.m01};
           text-transform: uppercase;
           text-align: center;
           position: relative;
@@ -263,6 +264,14 @@ const HeaderStyled = styled.nav`
               }
             }
 
+            &:nth-child(5) {
+              animation-delay: 1.4s;
+
+              &:before {
+                transform: translate(-22px, -20px);
+              }
+            }
+
             &:hover {
               &:before {
                 opacity: 1;
@@ -314,7 +323,8 @@ const HeaderStyled = styled.nav`
             &:nth-child(1),
             &:nth-child(2),
             &:nth-child(3),
-            &:nth-child(4) {
+            &:nth-child(4),
+            &:nth-child(5) {
               animation-delay: 0s;
             }
 
@@ -337,7 +347,7 @@ const HeaderStyled = styled.nav`
 `;
 
 const Header = () => {
-  const { t } = useTranslation("footer");
+  const { t } = useTranslation("common");
   const router = useRouter();
   const { locale } = router;
   const iconMenuRef = useRef(null);
@@ -352,13 +362,16 @@ const Header = () => {
 
   const handleScroll = () => {
     const iconMenu = iconMenuRef.current;
-    window.onscroll = function () {
-      if (window.pageYOffset >= 90) {
-        iconMenu.classList.add("sticky");
-      } else {
-        iconMenu.classList.remove("sticky");
-      }
-    };
+    if (iconMenu) {
+      window.onscroll = function () {
+        if (window.pageYOffset >= 90) {
+          iconMenu.classList.add("sticky");
+        } else {
+          iconMenu.classList.remove("sticky");
+        }
+      };
+    }
+   
   };
 
   const openMenu = () => {
@@ -377,6 +390,7 @@ const Header = () => {
       setTimeout(function () {
         menuOverlay.classList.remove("menu-close");
       }, 900);
+
     } else {
       menuOverlay.classList.remove("menu-close");
       menuOverlay.classList.add("menu-open");
@@ -389,6 +403,14 @@ const Header = () => {
     }
   };
 
+  const buttons = [
+    { path: "/", text: "home" },
+    { path: "/about", text: "about" },
+    { path: "/classes", text: "classes" },
+    { path: "/schedule", text: "schedule" },
+    { path: "/contact", text: "contact" },
+  ];
+
   return (
     <>
       <HeaderStyled>
@@ -399,21 +421,21 @@ const Header = () => {
         <div className="main-nav" ref={mainNavRef}>
           <div className="menu">
             <div className="menu-items">
-              <a href="#" className="item" target="_blank">
-                about
-              </a>
-              <a href="#" className="item" target="_blank">
-                tour
-              </a>
-              <a href="#p" className="item" target="_blank">
-                shop
-              </a>
-              <a href="#" className="item" target="_blank">
-                contacts
-              </a>
+            {buttons.map((button) => (
+              <Link key={button.text} href={button.path}>
+                <li>
+                  <a className={router === button.path ? "item active" : "item"}>
+                    {t(button.text)}
+                  </a>
+                </li>
+              </Link>
+            ))}
+              {/* <LanguageSwitcher className="item" /> */}
             </div>
+
           </div>
         </div>
+
       </HeaderStyled>
       <SwiperSlider />
     </>

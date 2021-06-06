@@ -192,8 +192,8 @@ const DanceOptions = () => {
   return (
     <DanceOptionsStyled className="module join-class">
       <h3 className="section-title">
-        <span>Join the</span>
-        <b>Circus</b>
+        <span>Pole</span>
+        <b>Practice</b>
       </h3>
       <div className="content">
         <div className="col first">
@@ -207,7 +207,7 @@ const DanceOptions = () => {
           </div>
         </div>
         <div className="col mid">
-          <p className="title mid-title">POLE</p>
+          <p className="title mid-title">EXOTOC POLE</p>
 
           <img src="/assets/pole-dancing.jpg" alt="" />
 
@@ -217,7 +217,7 @@ const DanceOptions = () => {
           </div>
         </div>
         <div className="col last">
-          <p className="title last-title">AERIAL RING</p>
+          <p className="title last-title">FLOOR DANCE</p>
           <div>
             Lorem ipsum dolor sit amet consec tetuer adipiscing elit nean sit
             eget commodo ligula.
