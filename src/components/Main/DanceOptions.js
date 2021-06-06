@@ -61,7 +61,12 @@ const DanceOptionsStyled = styled.section`
         width: 100%;
         padding: 0 10%;
         box-sizing: border-box;
-        bottom: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        bottom: 0;
+        margin: auto;
       }
 
       img {
@@ -144,7 +149,7 @@ const DanceOptionsStyled = styled.section`
         top: 20px;
 
         ${respondTo.sm`
-          left: 20px;
+          left: 30px;
         `}
       }
     }
@@ -161,7 +166,7 @@ const DanceOptionsStyled = styled.section`
         cursor: default;
         width: 100%;
         ${respondTo.sm`
-          left: 20px;
+          left: 30px;
           text-align: left;
         `}
       }
@@ -184,7 +189,7 @@ const DanceOptionsStyled = styled.section`
         text-align: right;
 
         ${respondTo.sm`
-          left: 20px;
+          left: 30px;
           text-align: left;
         `}
       }
