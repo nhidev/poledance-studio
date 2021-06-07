@@ -6,7 +6,6 @@ import { respondTo } from "../../styles/mixins";
 // import styles from "./Main.module.scss";
 
 const ClassScheduleStyled = styled.section`
-
   ${respondTo.sm`
     padding-top: 60px !important;
   `}
@@ -68,15 +67,16 @@ const ClassScheduleStyled = styled.section`
         height: 32px;
         position: relative;
       }
-      .arrow-down:before, .arrow-down:after {
+      .arrow-down:before,
+      .arrow-down:after {
         content: "";
         display: block;
         width: 20px;
         height: 4px;
-        background:  ${colors.m01};;
+        background: ${colors.m01};
         position: absolute;
         top: 15px;
-        transition: transform .5s;
+        transition: transform 0.5s;
       }
 
       .arrow-down:before {
@@ -124,7 +124,7 @@ const ClassScheduleStyled = styled.section`
         padding: 10px;
         border-bottom: 2px solid ${colors.neu06};
         &.active {
-        color: ${colors.m01};
+          color: ${colors.m01};
         }
         &:hover {
           background-color: rgb(231 239 245 / 50%);
@@ -133,7 +133,6 @@ const ClassScheduleStyled = styled.section`
           font-size: 12px;
         `}
       }
-     
     }
     .tab-content {
       margin-bottom: 60px;
@@ -217,12 +216,21 @@ const ClassScheduleStyled = styled.section`
         `}
       }
       a .btn {
-      margin: 20px 0;
+        margin: 20px 0;
+      }
     }
-    }
-   
   }
 `;
+
+export const days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 
 class Tabs extends React.Component {
   state = {
@@ -231,17 +239,8 @@ class Tabs extends React.Component {
   };
 
   componentDidMount() {
-    let days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ];
-    let d = new Date();
-    let dayName = days[d.getDay()];
+    const d = new Date();
+    const dayName = days[d.getDay()];
     this.setState({ activeTab: dayName });
   }
 
@@ -254,19 +253,23 @@ class Tabs extends React.Component {
   };
 
   render() {
+    const { isToggle, activeTab } = this.state;
+    const d = new Date();
+    const dayName = days[d.getDay()];
     let content;
     let buttons = [];
-    const { isToggle } = this.state;
     return (
       <div className="tabs-wrapper">
         {React.Children.map(this.props.children, (child) => {
           buttons.push(child.props.label);
-          if (child.props.label === this.state.activeTab)
-            content = child.props.children;
+          if (child.props.label === activeTab) content = child.props.children;
         })}
-        <h4 onClick={this.handleClick}><span>Today</span><i className={isToggle ? "arrow-down" : "arrow-down active"} /></h4>
+        <h4 onClick={this.handleClick}>
+          <span>{activeTab === dayName ? "Today" : activeTab}</span>
+          <i className={isToggle ? "arrow-down" : "arrow-down active"} />
+        </h4>
         <TabButtons
-          activeTab={this.state.activeTab}
+          activeTab={activeTab}
           buttons={buttons}
           changeTab={this.changeTab}
           className={isToggle ? "tab-buttons" : "tab-buttons toggle"}
@@ -312,7 +315,7 @@ const ClassSchedule = () => {
           <Tab label="Monday">
             <ul>
               <li>
-              <p className="date">19:15 – 20:20</p>
+                <p className="date">19:15 – 20:20</p>
                 <p className="place">Pole Dance</p>
                 <p className="country">Nana Class</p>
               </li>
@@ -321,12 +324,12 @@ const ClassSchedule = () => {
           <Tab label="Tuesday">
             <ul>
               <li>
-              <p className="date">2:00 - 13:15</p>
+                <p className="date">2:00 - 13:15</p>
                 <p className="place">Yoga Class</p>
                 <p className="country">Dan Class</p>
               </li>
               <li>
-              <p className="date">17:00 – 18:30</p>
+                <p className="date">17:00 – 18:30</p>
                 <p className="place">Aerial Hoop</p>
                 <p className="country">Dan Class</p>
               </li>
@@ -336,12 +339,12 @@ const ClassSchedule = () => {
                 <p className="country">Dan Class</p>
               </li>
               <li>
-              <p className="date">20:00 – 21:15</p>
+                <p className="date">20:00 – 21:15</p>
                 <p className="place">Aeral Hood</p>
                 <p className="country">Nana Class</p>
               </li>
               <li>
-              <p className="date">21:00 – 22.30</p>
+                <p className="date">21:00 – 22.30</p>
                 <p className="place">Pole Dance</p>
                 <p className="country">Nana Class</p>
               </li>
@@ -350,12 +353,12 @@ const ClassSchedule = () => {
           <Tab label="Wednesday">
             <ul>
               <li>
-              <p className="date">12:00 – 13:15</p>
+                <p className="date">12:00 – 13:15</p>
                 <p className="place">Pole Dance</p>
                 <p className="country">Dan Class</p>
               </li>
               <li>
-              <p className="date">19:15 – 20:20</p>
+                <p className="date">19:15 – 20:20</p>
                 <p className="place">Pole Dance</p>
                 <p className="country">Nana Class</p>
               </li>
@@ -364,28 +367,28 @@ const ClassSchedule = () => {
           <Tab label="Thursday">
             <ul>
               <li>
-              <p className="date">12:00 - 13:15</p>
+                <p className="date">12:00 - 13:15</p>
                 <p className="place">Yoga Class</p>
                 <p className="country">Dan Class</p>
               </li>
 
               <li>
-              <p className="date">17:00 – 18:30</p>
+                <p className="date">17:00 – 18:30</p>
                 <p className="place">Aerial Hoop</p>
                 <p className="country">Dan Class</p>
               </li>
               <li>
-              <p className="date">18:30 – 20:00</p>
+                <p className="date">18:30 – 20:00</p>
                 <p className="place">Pole Dance</p>
                 <p className="country">Dan Class</p>
               </li>
               <li>
-              <p className="date">20:00 – 21:15</p>
+                <p className="date">20:00 – 21:15</p>
                 <p className="place">Aeral Hood</p>
                 <p className="country">Nana Class</p>
               </li>
               <li>
-              <p className="date">21:00 – 22.30</p>
+                <p className="date">21:00 – 22.30</p>
                 <p className="place">Pole Dance</p>
                 <p className="country">Nana Class</p>
               </li>
@@ -394,12 +397,12 @@ const ClassSchedule = () => {
           <Tab label="Friday">
             <ul>
               <li>
-              <p className="date">12:00 - 13:15</p>
+                <p className="date">12:00 - 13:15</p>
                 <p className="place">Yoga Class</p>
                 <p className="country">Dan Class</p>
               </li>
               <li>
-              <p className="date">19:15 – 20:20</p>
+                <p className="date">19:15 – 20:20</p>
                 <p className="place">Aeral Hood</p>
                 <p className="country">Nana Class</p>
               </li>
@@ -408,22 +411,22 @@ const ClassSchedule = () => {
           <Tab label="Saturday">
             <ul>
               <li>
-              <p className="date">12:00 - 13:15</p>
+                <p className="date">12:00 - 13:15</p>
                 <p className="place">Yoga Class</p>
                 <p className="country">Dan Class</p>
               </li>
               <li>
-              <p className="date">17:10 – 18:30</p>
+                <p className="date">17:10 – 18:30</p>
                 <p className="place">Aerial Hoop</p>
                 <p className="country">Nana Class</p>
               </li>
               <li>
-              <p className="date">18:30 – 20:00</p>
+                <p className="date">18:30 – 20:00</p>
                 <p className="place">Pole Dance</p>
                 <p className="country">Nana Class</p>
               </li>
               <li>
-              <p className="date">20:00 – 21:15</p>
+                <p className="date">20:00 – 21:15</p>
                 <p className="place">Aeral Hood</p>
                 <p className="country">Nana Class</p>
               </li>
@@ -432,12 +435,12 @@ const ClassSchedule = () => {
           <Tab label="Sunday">
             <ul>
               <li>
-              <p className="date">12:00 - 13:15</p>
+                <p className="date">12:00 - 13:15</p>
                 <p className="place">Yoga Class</p>
                 <p className="country">Dan Class</p>
               </li>
               <li>
-              <p className="date">17:10 – 18:30</p>
+                <p className="date">17:10 – 18:30</p>
                 <p className="place">Aerial Hoop</p>
                 <p className="country">Nana Class</p>
               </li>
@@ -451,8 +454,8 @@ const ClassSchedule = () => {
           <p>Combo 28 classes 3.500.000 / 4 months </p>
           <p>Combo 60 classes 7.000.000 / 8 months </p>
           <a href="/schedule">
-          <button className="btn">view all</button>
-        </a>
+            <button className="btn">view all</button>
+          </a>
         </div>
       </div>
     </ClassScheduleStyled>
