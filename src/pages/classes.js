@@ -22,7 +22,7 @@ const Classes = () => {  const { t } = useTranslation("common");
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["common", "footer"])),
+    ...(await serverSideTranslations(locale, ["common", "home"])),
   },
 });
 

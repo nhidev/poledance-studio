@@ -18,7 +18,7 @@ const MapStyled = styled.div`
     box-sizing: border-box;
     width: 4rem;
     height: 4rem;
-    color: #fff;
+    color: white;
     background: transparent url("https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png")
       no-repeat center;
     background-size: contain;
@@ -35,7 +35,7 @@ const MapStyled = styled.div`
 
 const mapStyle = {
   width: "100%",
-  height: 600,
+  height: 500,
 };
 
 const CustomMarker = ({ index, marker, openPopup }) => {

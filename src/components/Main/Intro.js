@@ -119,13 +119,6 @@ const IntroStyled = styled.section`
 
         li {
           display: flex;
-          justify-content: space-between;
-          align-items: center;
-          text-transform: uppercase;
-          font-size: 14px;
-          line-height: 20px;
-          letter-spacing: 0.3px;
-          font-weight: 600;
           padding: 0px 20px;
           transition: all 0.6s ease;
           position: relative;
@@ -152,11 +145,13 @@ const IntroStyled = styled.section`
 
           article {
             display: flex;
+            flex-direction: column;
           }
 
           p {
-            color: #fff;
+            color: white;
             transition: all 0.2s ease;
+            margin-bottom: 10px;
           }
 
           span {
@@ -224,14 +219,10 @@ const Intro = () => {
             <li>
               <article>
                 <p>{t("homeIntroductPar1")}</p>
+                <p dangerouslySetInnerHTML={{ __html: t("homeIntroductPar2") }} />
+                <p>{t("homeIntroductPar3")} <a href="https://www.facebook.com/Dan-Poledance-Studio-2215009938546431">DanPoleDanceStudio</a></p>
               </article>
-            </li>
-
-            <li>
-              <article>
-                <p>{t("homeIntroductPar2")}</p>
-              </article>
-            </li>
+            </li>  
           </ul>
         </div>
 

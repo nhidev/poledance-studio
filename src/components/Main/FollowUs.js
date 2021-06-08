@@ -161,6 +161,7 @@ const FollowUsStyled = styled.section`
       .info {
         color: white;
         position: absolute;
+        top: 25%;
         width: 100%;
         padding: 0 10%;
         box-sizing: border-box;
@@ -169,7 +170,7 @@ const FollowUsStyled = styled.section`
           position: relative;
           color: #000;
           transition: all 0.2s ease;
-          padding: 10px 0 10px 40px;
+          padding: 6px 0 6px 40px;
           background-position: center left;
           text-align: left;
           background-size: 28px;

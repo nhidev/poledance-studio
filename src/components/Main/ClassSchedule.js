@@ -56,7 +56,6 @@ const ClassScheduleStyled = styled.section`
         justify-content: space-between;
         align-items: center;
         margin-bottom: 20px;
-        text-transform: uppercase;
         min-width: 130px;
         ${respondTo.sm`
           font-size: 18px;
@@ -147,11 +146,8 @@ const ClassScheduleStyled = styled.section`
         display: grid;
         grid-template-columns: auto auto auto;
         grid-column-gap: 4%;
-        text-transform: uppercase;
-        // font-family: $font-01;
         font-size: 16px;
         letter-spacing: 0.3px;
-        font-weight: 600;
         align-items: center;
         padding: 20px 10px;
         border-bottom: 1px solid ${colors.m02};
@@ -211,7 +207,6 @@ const ClassScheduleStyled = styled.section`
       }
       p {
         color: ${colors.neu06};
-        text-transform: uppercase;
         ${respondTo.sm`
           font-size: 12px;
         `}

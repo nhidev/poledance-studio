@@ -50,7 +50,31 @@ const DanceOptionsStyled = styled.section`
       ${respondTo.sm`
         height: 240px;
       `}
-      > div {
+
+      .btn-more {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 16px;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          box-shadow: inset 0px 0px 0px 1px white;
+          color: white;
+          background-color: transparent;
+          padding: 8px 16px;
+          transition: all 0.6s ease;
+          border: 0;
+          cursor: pointer;
+          margin: 10px 0;
+
+          &:hover {
+              box-shadow: inset 0px 0px 0px 1px ${colors.neu06},
+                  inset 0px -40px 0px ${colors.neu06};
+              color: white;
+          }
+      }
+
+      .text-box {
         color: #fff;
         z-index: 3;
         position: absolute;
@@ -58,6 +82,7 @@ const DanceOptionsStyled = styled.section`
         padding: 0 10%;
         box-sizing: border-box;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         top: 0;
@@ -87,11 +112,8 @@ const DanceOptionsStyled = styled.section`
         text-transform: uppercase;
         transition: all 0.6s ease;
 
-        ${respondTo.lg`
-          font-size: 24px;
-        `}
         ${respondTo.md`
-          font-size: 18px;
+          font-size: 24px;
         `}
       }
 
@@ -208,17 +230,27 @@ const DanceOptions = () => {
         <div className="col first">
           <p className="title first-title">{t("homePolePracticeItemTitle1")}</p>
           <img src="/assets/aerial-pole-dancing.jpg" alt="" />
-          <div>{t("homePolePracticeItemDescription1")}</div>
+          <div className="text-box">
+            <p>{t("homePolePracticeItemDescription1")}</p>
+            <a className="btn-more" href="/classes">Read more</a>
+          </div>
+         
         </div>  
         <div className="col mid">
           <p className="title mid-title">{t("homePolePracticeItemTitle2")}</p>
           <img src="/assets/pole-dancing.jpg" alt="" />
-          <div>{t("homePolePracticeItemDescription2")}</div>
+          <div className="text-box">
+            <p>{t("homePolePracticeItemDescription2")}</p>
+            <a className="btn-more" href="/classes">Read more</a>
+          </div>
         </div>
         <div className="col last">
           <p className="title last-title">{t("homePolePracticeItemTitle3")}</p>
           <img src="/assets/aerial-dancing.jpg" alt="" />
-          <div>{t("homePolePracticeItemDescription3")}</div>
+          <div className="text-box">
+            <p>{t("homePolePracticeItemDescription3")}</p>
+            <a className="btn-more" href="/classes">{t("readMore")}</a>
+          </div>
         </div>
       </div>
     </DanceOptionsStyled>
