@@ -405,11 +405,11 @@ const Header = () => {
   };
 
   const buttons = [
-    { path: "/", text: "home" },
-    { path: "/about", text: "about" },
-    { path: "/classes", text: "classes" },
-    { path: "/schedule", text: "schedule" },
-    { path: "/contact", text: "contact" },
+    { path: "/", text: "menuHome" },
+    { path: "/about", text: "menuAbout" },
+    { path: "/classes", text: "menuClasses" },
+    { path: "/schedule", text: "menuSchedule" },
+    { path: "/contact", text: "menuContact" },
   ];
 
   return (

@@ -1,8 +1,7 @@
 import styled from "styled-components";
+import { useTranslation } from "next-i18next";
 import { colors } from "../../styles/theme";
 import { respondTo } from "../../styles/mixins";
-
-// import styles from "./Main.module.scss";
 
 const DanceOptionsStyled = styled.section`
   position: relative;
@@ -33,7 +32,9 @@ const DanceOptionsStyled = styled.section`
   }
 
   .content {
+    grid-template-columns: repeat(3, 1fr);
     ${respondTo.sm`
+      grid-template-columns: 1fr;
       grid-row-gap: 10px;
     `}
 
@@ -81,13 +82,16 @@ const DanceOptionsStyled = styled.section`
         color: transparent;
         -webkit-text-stroke: 1px white;
         font-weight: 900;
-        font-size: 40px;
+        font-size: 32px;
         letter-spacing: 1.5px;
         text-transform: uppercase;
         transition: all 0.6s ease;
 
         ${respondTo.lg`
-          font-size: 28px;
+          font-size: 24px;
+        `}
+        ${respondTo.md`
+          font-size: 18px;
         `}
       }
 
@@ -134,7 +138,7 @@ const DanceOptionsStyled = styled.section`
     }
 
     .first {
-      grid-column: 1 / 4;
+      /* grid-column: 1 / 4; */
       transform: translateY(50px);
 
       ${respondTo.sm`
@@ -153,7 +157,7 @@ const DanceOptionsStyled = styled.section`
     }
 
     .mid {
-      grid-column: 4 / 8;
+      /* grid-column: 4 / 8; */
       position: relative;
       ${respondTo.sm`
         grid-column: 1;
@@ -171,7 +175,7 @@ const DanceOptionsStyled = styled.section`
     }
 
     .last {
-      grid-column: 8 / 11;
+      /* grid-column: 8 / 11; */
       transform: translateY(50px);
       position: relative;
 
@@ -196,32 +200,25 @@ const DanceOptionsStyled = styled.section`
 `;
 
 const DanceOptions = () => {
+  const { t } = useTranslation("home");
   return (
     <DanceOptionsStyled className="module join-class">
-      <h3 className="section-title">
-        <span>Pole</span>
-        <b>Practice</b>
-      </h3>
+      <h3 className="section-title" dangerouslySetInnerHTML={{__html: t('homePolePracticeTitle')}} />
       <div className="content">
         <div className="col first">
-          <p className="title first-title">AERIAL</p>
+          <p className="title first-title">{t("homePolePracticeItemTitle1")}</p>
           <img src="/assets/aerial-pole-dancing.jpg" alt="" />
-          <div>
-          Aerial Hoop is a fantastic full body workout designed to build strength, muscle tone and increase flexibility. It is a great way to get fit, work with others and push yourself to new limits!</div>
-        </div>
+          <div>{t("homePolePracticeItemDescription1")}</div>
+        </div>  
         <div className="col mid">
-          <p className="title mid-title">EXOTIC POLE</p>
+          <p className="title mid-title">{t("homePolePracticeItemTitle2")}</p>
           <img src="/assets/pole-dancing.jpg" alt="" />
-          <div>
-          Exotic Pole shows the most sensual and tempting side of pole dancing. This is a choreography class in high heels (heels are optional), you will learn to feel your body and movement , awaken your natural sensuality and musicality, how to express yourself with the dance.
-          </div>
+          <div>{t("homePolePracticeItemDescription2")}</div>
         </div>
         <div className="col last">
-          <p className="title last-title">AERIAL YOGA</p>
-          <div>
-          Aerial Yoga takes many of the traditional yoga poses and incorporates them using swings that hang from the ceiling. 
-          </div>
+          <p className="title last-title">{t("homePolePracticeItemTitle3")}</p>
           <img src="/assets/aerial-dancing.jpg" alt="" />
+          <div>{t("homePolePracticeItemDescription3")}</div>
         </div>
       </div>
     </DanceOptionsStyled>

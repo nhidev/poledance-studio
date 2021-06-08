@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useTranslation } from "next-i18next";
 import { colors } from "../../styles/theme";
 import { respondTo } from "../../styles/mixins";
 
@@ -175,22 +176,22 @@ const FollowUsStyled = styled.section`
           background-repeat: no-repeat;
           filter: invert(1);
           &.tel {
-            background-image: url('/assets/icon-phone.svg');
+            background-image: url("/assets/icon-phone.svg");
           }
           &.email {
-            background-image: url('/assets/icon-email.svg');      
+            background-image: url("/assets/icon-email.svg");
           }
           &.address {
-            background-image: url('/assets/icon-address.svg');   
+            background-image: url("/assets/icon-address.svg");
           }
           &.time {
-            background-image: url('/assets/icon-hours.svg');
+            background-image: url("/assets/icon-hours.svg");
           }
           ${respondTo.sm`
            font-size: 12px;
           `}
         }
-        
+
         ${respondTo.sm`
           padding: 20px 20px 0;
         `}
@@ -294,29 +295,29 @@ const FollowUsStyled = styled.section`
 `;
 
 const FollowUs = () => {
+  const { t } = useTranslation("home");
   return (
     <FollowUsStyled className="module follow">
-      <h3 className="section-title">
-        <b>Follow</b>
-        <span>Us</span>
-      </h3>
+      <h3
+        className="section-title"
+        dangerouslySetInnerHTML={{ __html: t("homeFollowUsTitle") }}
+      />
       <div className="content">
         <div className="newsletter">
-          <p className="social-title">Dance with us</p>
+          <p className="social-title">{t("homeFollowUsContactInfoTitle")}</p>
 
           <img src="/assets/new-letter-box-bg.jpg" alt="" />
 
           <div className="info">
-          <p className="tel">0973825156</p>
+            <p className="tel">0973825156</p>
             <p className="email">untilyou0612@gmail.com</p>
-            <p className="address">Floor 2, 179B Nguyen Huu Canh Street, Ward 22</p>
-            <p className="time">Open during class times.</p>
-         
+            <p className="address">{t("homeFollowUsContactInfoAddress")}</p>
+            <p className="time">{t("homeFollowUsContactInfoOpenTimes")}</p>
           </div>
         </div>
 
         <div className="social">
-          <p className="social-title">Social</p>
+          <p className="social-title">{t("homeFollowUsSocialTitle")}</p>
           <div className="social-icons">
             <a
               className="network"
@@ -326,19 +327,11 @@ const FollowUs = () => {
               <img src="/assets/facebook.svg" alt="" />
               <p className="social-name">facebook</p>
             </a>
-            <a
-              className="network"
-              href="#"
-              target="_blank"
-            >
+            <a className="network" href="#" target="_blank">
               <img src="/assets/youtube.svg" alt="" />
               <p className="social-name">youtube</p>
             </a>
-            <a
-              className="network"
-              href="#"
-              target="_blank"
-            >
+            <a className="network" href="#" target="_blank">
               <img src="/assets/instagram.svg" alt="" />
               <p className="social-name">instagram</p>
             </a>

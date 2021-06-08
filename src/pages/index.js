@@ -9,11 +9,11 @@ const Home = () => {
   return (
     <div>
       <Head>
-        <title>Dan Studio</title>
+        <title>Dan Poledance Studio</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Use Sass to start your Next.js app with CSS superpowers!"
+          content={t('homeIntroductPar1')}
         ></meta>
       </Head>
       <Main />
@@ -23,7 +23,7 @@ const Home = () => {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["common", "footer"])),
+    ...(await serverSideTranslations(locale, ["common", "home"])),
   },
 });
 

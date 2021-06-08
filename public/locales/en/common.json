@@ -1,8 +1,7 @@
 {
-  "home": "Home",
-  "about": "About us",
-  "classes": "Classes",
-  "schedule": "Schedule",
-  "gallery": "Gallery",
-  "contact": "Contact"
+  "menuHome": "Home",
+  "menuAbout": "About us",
+  "menuClasses": "Classes",
+  "menuSchedule": "Schedule",
+  "menuContact": "Contact"
 }

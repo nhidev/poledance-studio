@@ -1,8 +1,7 @@
 {
-  "home": "Trang chủ",
-  "about": "Giới thiệu",
-  "classes": "Lớp học",
-  "schedule": "Lịch học",
-  "gallery": "Gallery",
-  "contact": "Liên hệ"
+  "menuHome": "Trang chủ",
+  "menuAbout": "Giới thiệu",
+  "menuClasses": "Lớp học",
+  "menuSchedule": "Lịch học",
+  "menuContact": "Liên hệ"
 }

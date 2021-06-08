@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
+import { useTranslation } from "next-i18next";
 import { colors } from "../../styles/theme";
 import { respondTo } from "../../styles/mixins";
 
@@ -303,13 +304,13 @@ const Tab = (props) => {
 };
 
 const ClassSchedule = () => {
+  const { t } = useTranslation("home");
   return (
     <ClassScheduleStyled className="module tour-list">
-      <h3 className="section-title">
-        <b>Class</b>
-        <span>Schedule</span>
-      </h3>
-
+      <h3
+        className="section-title"
+        dangerouslySetInnerHTML={{ __html: t("homeClassScheduleTitle") }}
+      />
       <div className="content">
         <Tabs>
           <Tab label="Monday">
@@ -448,13 +449,13 @@ const ClassSchedule = () => {
           </Tab>
         </Tabs>
         <div className="fee">
-          <h4>Class prices</h4>
+          <h4>{t("homeClassPrices")}</h4>
           <p>Drop in 220k</p>
           <p>8 Classes 1.200.000</p>
           <p>Combo 28 classes 3.500.000 / 4 months </p>
           <p>Combo 60 classes 7.000.000 / 8 months </p>
           <a href="/schedule">
-            <button className="btn">view all</button>
+            <button className="btn">{t("homeViewAllButton")}</button>
           </a>
         </div>
       </div>

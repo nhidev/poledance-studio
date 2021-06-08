@@ -1,8 +1,7 @@
 import styled from "styled-components";
+import { useTranslation } from "next-i18next";
 import { colors } from "../../styles/theme";
 import { respondTo } from "../../styles/mixins";
-
-// import styles from "./Main.module.scss";
 
 const IntroStyled = styled.section`
   &:before {
@@ -31,7 +30,6 @@ const IntroStyled = styled.section`
 
   .content {
     grid-template-rows: auto auto auto;
-    //grid-template-areas: "cover cover cover cover""button tracks";
 
     ${respondTo.sm`
       justify-items: center;
@@ -87,7 +85,6 @@ const IntroStyled = styled.section`
       display: grid;
       grid-template-columns: repeat(8, 1fr);
       grid-column-gap: 20px;
-      //grid-area: tracks;
 
       ${respondTo.sm`
         width: 100%;
@@ -125,7 +122,6 @@ const IntroStyled = styled.section`
           justify-content: space-between;
           align-items: center;
           text-transform: uppercase;
-          /* font-family: $font-01; */
           font-size: 14px;
           line-height: 20px;
           letter-spacing: 0.3px;
@@ -200,7 +196,6 @@ const IntroStyled = styled.section`
       grid-column: 1 / 5;
       margin-top: 30px;
       z-index: 2;
-      //grid-area: button;
 
       ${respondTo.sm`
         grid-row: 3;
@@ -211,12 +206,13 @@ const IntroStyled = styled.section`
 `;
 
 const Intro = () => {
+  const { t } = useTranslation("home");
   return (
     <IntroStyled className="module album">
-      <h3 className="section-title">
-        <b>Body &</b>
-        <span>Pole</span>
-      </h3>
+      <h3
+        className="section-title"
+        dangerouslySetInnerHTML={{ __html: t("homeIntroductTitle") }}
+      />
       <div className="content">
         <div className="cover">
           <div className="cover-img">
@@ -227,24 +223,13 @@ const Intro = () => {
           <ul className="tracklist">
             <li>
               <article>
-                <p>
-                  Whether you’ve never tried aerial, or you spend half your day
-                  upside down, when you spend time with us you will evolve. You
-                  will unleash parts of yourself yet unknown. Strengths will
-                  surface. Muscles will transform. And you will own every inch
-                  of it.
-                </p>
+                <p>{t("homeIntroductPar1")}</p>
               </article>
             </li>
 
             <li>
               <article>
-                <p>
-                  Want to nail that inversion? Looking to get deeper in your
-                  bend? Get unlimited access to our online classes, designed to
-                  give you the best of our in-studio expertise, for everyday use
-                  at home.
-                </p>
+                <p>{t("homeIntroductPar2")}</p>
               </article>
             </li>
           </ul>
@@ -252,7 +237,7 @@ const Intro = () => {
 
         <div className="button-container">
           <a href="/classes">
-            <button className="btn">Find our more</button>
+            <button className="btn">{t("homeIntroductButtonText")}</button>
           </a>
         </div>
       </div>

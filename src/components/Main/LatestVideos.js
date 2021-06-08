@@ -338,35 +338,35 @@ const LatestVideos = () => {
       <div className="content" ref={videoContentRef}>
         <a
           className="video-item"
-          data-video="https://www.youtube.com/embed/D6Wi3SmmnAE"
-          data-url="https://www.youtube.com/watch?v=D6Wi3SmmnAE"
+          data-video="/assets/pole-dance-video1.mp4"
+          data-url="/assets/pole-dance-video1.mp4"
           onClick={openVideo}
         >
-          <p className="video-title">Flou</p>
+          {/* <p className="video-title">Flou</p> */}
           <span className="video-icon"></span>
-          <img src="/assets/video-bg-01.jpg.jpg" alt="" />
+          <img src="/assets/pole-dance-bg-video1.jpg" alt="" />
         </a>
 
         <a
           className="video-item"
-          data-video="https://www.youtube.com/embed/Hi7Rx3En7-k"
-          data-url="https://www.youtube.com/watch?v=Hi7Rx3En7-k"
+          data-video="/assets/pole-dance-video2.mp4"
+          data-url="/assets/pole-dance-video2.mp4"
           onClick={openVideo}
         >
-          <p className="video-title">balance ton quoi</p>
+          {/* <p className="video-title">balance ton quoi</p> */}
           <span className="video-icon"></span>
-          <img src="/assets/video-bg-02.jpg" alt="" />
+          <img src="/assets/pole-dance-bg-video2.jpg" alt="" />
         </a>
 
         <a
           className="video-item"
-          data-video="https://www.youtube.com/embed/Fy1xQSiLx8U"
-          data-url="https://www.youtube.com/watch?v=Fy1xQSiLx8U"
+          data-video="/assets/pole-dance-video3.mp4"
+          data-url="/assets/pole-dance-video3.mp4"
           onClick={openVideo}
         >
-          <p className="video-title">tout oublier</p>
+          {/* <p className="video-title">tout oublier</p> */}
           <span className="video-icon"></span>
-          <img src="/assets/video-bg-03.jpg" alt="" />
+          <img src="/assets/pole-dance-bg-video3.jpg" alt="" />
         </a>
       </div>
 
@@ -377,7 +377,6 @@ const LatestVideos = () => {
             ref={closeVideoRef}
             onClick={closeVideo}
           ></i>
-
           <div className="video-container">
             <div className="video-code">
               <iframe
