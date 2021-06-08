@@ -229,7 +229,7 @@ const DanceOptions = () => {
       <div className="content">
         <div className="col first">
           <p className="title first-title">{t("homePolePracticeItemTitle1")}</p>
-          <img src="/assets/aerial-pole-dancing.jpg" alt="" />
+          <img src="/assets/pole-practice1.jpg" alt="" />
           <div className="text-box">
             <p>{t("homePolePracticeItemDescription1")}</p>
             <a className="btn-more" href="/classes">Read more</a>
@@ -238,7 +238,7 @@ const DanceOptions = () => {
         </div>  
         <div className="col mid">
           <p className="title mid-title">{t("homePolePracticeItemTitle2")}</p>
-          <img src="/assets/pole-dancing.jpg" alt="" />
+          <img src="/assets/pole-practice2.jpg" alt="" />
           <div className="text-box">
             <p>{t("homePolePracticeItemDescription2")}</p>
             <a className="btn-more" href="/classes">Read more</a>
@@ -246,7 +246,7 @@ const DanceOptions = () => {
         </div>
         <div className="col last">
           <p className="title last-title">{t("homePolePracticeItemTitle3")}</p>
-          <img src="/assets/aerial-dancing.jpg" alt="" />
+          <img src="/assets/pole-practice3.jpg" alt="" />
           <div className="text-box">
             <p>{t("homePolePracticeItemDescription3")}</p>
             <a className="btn-more" href="/classes">{t("readMore")}</a>

@@ -266,7 +266,7 @@ const IntructorSection = () => {
                 flexible.
               </p>
               <p>
-                Check him out on Instagram @dantruong , watch his endless
+                Check him out on Instagram <a href="https://www.instagram.com/truonghoaidang" target="_blank">@truonghoaidan</a> , watch his endless
                 amounts of incredible videos on YouTube
               </p>
             </article>
@@ -290,7 +290,7 @@ const IntructorSection = () => {
                 style of movement, her powerhouse strength and fearlessness.
               </p>
               <p>
-                Check her out on Instagram @nanami_rosie , watch her endless
+                Check her out on Instagram <a href="https://www.instagram.com/nanami_rosie" target="_blank">@nanami_rosie</a> , watch her endless
                 gorgeous videos on{" "}
                 <a href="https://www.youtube.com/channel/UCCUpl4VzL4OEopdQKTEodyA">
                   YouTube

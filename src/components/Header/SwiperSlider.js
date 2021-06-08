@@ -397,19 +397,19 @@ const SwiperSliderStyled = styled.header`
 export const images = [
   {
     id: 0,
-    image: "/assets/slider2.jpg",
-  },
-  {
-    id: 1,
-    image: "/assets/slider4.jpg",
-  },
-  {
-    id: 2,
     image: "/assets/slider1.jpg",
   },
   {
-    id: 3,
+    id: 1,
+    image: "/assets/slider2.jpg",
+  },
+  {
+    id: 2,
     image: "/assets/slider3.jpg",
+  },
+  {
+    id: 3,
+    image: "/assets/slider4.jpg",
   },
 ];
 
